@@ -61,7 +61,7 @@ app.get("/upc-code/:id", async (req, res) => {
     res.status(500).json({ message: "Something went wrong" });
   }
 });
-app.get("/",(res,res)=>{
+app.get("/",(req,res)=>{
   res.status(200).json({message:"Active"})
 })
 // Corrected method for starting the server
