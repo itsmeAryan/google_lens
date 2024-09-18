@@ -52,17 +52,19 @@ app.get("/upc-code/:id", async (req, res) => {
 
   try {
     const { data } = await axios.get(
-      https://api.upcitemdb.com/prod/trial/lookup?upc=${id},
+     ` https://api.upcitemdb.com/prod/trial/lookup?upc=${id}`,
       // https://api.barcodelookup.com/v3/products?barcode=${id}&formatted=y&key=vs17361gw172u9f4uitgnw2qeltequ
-      config
+      // config
     );
     res.status(200).json(data);
   } catch (error) {
     res.status(500).json({ message: "Something went wrong" });
   }
 });
-
+app.get("/",(res,res)=>{
+  res.status(200).json({message:"Active"})
+})
 // Corrected method for starting the server
 app.listen(port, () => {
-  console.log(Server is running on port ${port});
+  console.log(`Server is running on port ${port}`);
 });
