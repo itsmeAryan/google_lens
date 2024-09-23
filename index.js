@@ -4,7 +4,7 @@ const { getJson } = require("serpapi"); // const getJson correctly
 const app = express();
 const port = process.env.PORT || 3000;
 const serpapiKey =
-  "83769be6888101563b534f88c594e89f43451287078d82aaf308bd7dd9d66c77";
+  "9c6fda6b0216b37384edd1429d85b3d10c9d616330d179d3ca4207a756477fb7";
 
 app.use(express.json());
 
